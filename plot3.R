@@ -15,7 +15,8 @@ days <- df[df$Date >= start_date & df$Date <= end_date,]
 y = 'Energy sub metering'
 
 png('plot3.png')
-plot(days$Time, days$Sub_metering_1, pch='.', ylab = y, xlab = NA)
+plot(days$Time, days$Sub_metering_1, pch='.', ylab = y, xlab = NA, 
+     width = 480,height = 480, units='px')
 lines(days$Time, y = days$Sub_metering_1, pch='.')
 lines(days$Time, y = days$Sub_metering_2, pch='.', col = 'red')
 lines(days$Time, y = days$Sub_metering_3, pch='.', col = 'blue')

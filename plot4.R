@@ -15,18 +15,22 @@ days <- df[df$Date >= start_date & df$Date <= end_date,]
 png('plot4.png')
 
 par(mfrow = c(2, 2))
-plot(days$Time, days$Global_active_power, pch='.', ylab = 'Global Active Power', xlab = NA)
+plot(days$Time, days$Global_active_power, pch='.', ylab = 'Global Active Power', xlab = NA, 
+     width = 480,height = 480, units='px')
 lines(days$Time, y = days$Global_active_power, pch='.')
 
-plot(days$Time, days$Voltage, pch='.', ylab = 'Voltage', xlab = 'datetime')
+plot(days$Time, days$Voltage, pch='.', ylab = 'Voltage', xlab = 'datetime', 
+     width = 480,height = 480, units='px')
 lines(days$Time, y = days$Voltage, pch='.')
 
-plot(days$Time, days$Sub_metering_1, pch='.', ylab = 'Energy sub metering', xlab = NA)
+plot(days$Time, days$Sub_metering_1, pch='.', ylab = 'Energy sub metering', xlab = NA, 
+     width = 480,height = 480, units='px')
 lines(days$Time, y = days$Sub_metering_1, pch='.')
 lines(days$Time, y = days$Sub_metering_2, pch='.', col = 'red')
 lines(days$Time, y = days$Sub_metering_3, pch='.', col = 'blue')
 
-plot(days$Time, days$Global_reactive_power, pch='.', ylab = 'Global_reactive_power', xlab = 'datetime')
+plot(days$Time, days$Global_reactive_power, pch='.', ylab = 'Global_reactive_power', 
+     xlab = 'datetime', width = 480,height = 480, units='px')
 lines(days$Time, y = days$Global_reactive_power, pch='.')
 
 dev.off()

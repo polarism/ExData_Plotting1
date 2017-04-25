@@ -15,6 +15,7 @@ days <- df[df$Date >= start_date & df$Date <= end_date,]
 y = 'Global Active Power (kilowatts)'
 
 png('plot2.png')
-plot(days$Time, days$Global_active_power, pch='.', ylab = y, xlab = NA)
+plot(days$Time, days$Global_active_power, pch='.', ylab = y, xlab = NA, 
+     width = 480,height = 480, units='px')
 lines(days$Time, y = days$Global_active_power, pch='.')
 dev.off()

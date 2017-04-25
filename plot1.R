@@ -6,7 +6,6 @@ df <- read.csv('../household_power_consumption.txt',
                               "numeric", "numeric", "numeric"))
 df$Date <- as.Date(strptime(df$Date, '%d/%m/%Y'))
 
-
 start_date <- as.Date('2007-02-01')
 end_date <- as.Date('2007-02-02')
 
@@ -18,5 +17,6 @@ y = 'Frequency'
 
 png('plot1.png')
 hist(days$Global_active_power, col = 'red', 
-     main = title, xlab = x, ylab = y)
+     main = title, xlab = x, ylab = y, 
+     width = 480,height = 480, units='px')
 dev.off()
