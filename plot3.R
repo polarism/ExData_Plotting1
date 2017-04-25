@@ -20,4 +20,6 @@ plot(days$Time, days$Sub_metering_1, pch='.', ylab = y, xlab = NA,
 lines(days$Time, y = days$Sub_metering_1, pch='.')
 lines(days$Time, y = days$Sub_metering_2, pch='.', col = 'red')
 lines(days$Time, y = days$Sub_metering_3, pch='.', col = 'blue')
+legend(x = 'topright', c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), 
+       col = c('black', 'red', 'blue'), lty=c(1,1))
 dev.off()

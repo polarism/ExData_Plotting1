@@ -28,6 +28,8 @@ plot(days$Time, days$Sub_metering_1, pch='.', ylab = 'Energy sub metering', xlab
 lines(days$Time, y = days$Sub_metering_1, pch='.')
 lines(days$Time, y = days$Sub_metering_2, pch='.', col = 'red')
 lines(days$Time, y = days$Sub_metering_3, pch='.', col = 'blue')
+legend(x = 'topright', c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3'), 
+       col = c('black', 'red', 'blue'), lty=c(1,1))
 
 plot(days$Time, days$Global_reactive_power, pch='.', ylab = 'Global_reactive_power', 
      xlab = 'datetime', width = 480,height = 480, units='px')
